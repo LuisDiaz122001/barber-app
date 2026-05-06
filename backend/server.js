@@ -6,7 +6,7 @@ import barbershopRoutes from './src/routes/barbershop.routes.js';
 import serviceRoutes from './src/routes/service.routes.js';
 import barberRoutes from './src/routes/barber.routes.js';
 import appointmentRoutes from './src/routes/appointment.routes.js';
-import availabilityRoutes from './routes/availability.routes.js';
+import availabilityRoutes from './src/routes/availability.routes.js';
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use('/barbershops', barbershopRoutes);
 app.use('/services', serviceRoutes);
 app.use('/barbers', barberRoutes);
 app.use('/appointments', appointmentRoutes);
-app.use('/availability', availabilityRoutes);
+app.use(availabilityRoutes);
 
 // SERVER
 app.listen(3000, () => {

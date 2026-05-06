@@ -80,7 +80,11 @@ export async function getBarberAvailability(barberId, date) {
         return !isBlocked;
     });
 
-    return availableSlots.map((d) =>
-        d.toISOString().substring(11, 16) // HH:mm
-    );
+    return availableSlots.map((d) => {
+        return d.toLocaleTimeString('es-CO', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+        });
+    });
 }

@@ -1,7 +1,7 @@
 import express from 'express';
 import {
     createService
-} from '../service/service.service.js';
+} from '../services/service.service.js';
 import {
     authMiddleware
 } from '../middleware/auth.middleware.js';
